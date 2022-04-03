@@ -17,6 +17,13 @@ This project is still under development. I am implementing the layout, and I wil
 - [ ] Implementing integration tests with React Testing Library (RTL)
 - [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
 
+## :man_technologist: Developed Skills
+
+* Develop a React application
+* Create and reuse React components
+* React to user interactions by manipulating the components' states and props according to user events
+* Use the React Router library to handle page navigation
+
 ## :memo: Methodologies
 
 * Mobile First
