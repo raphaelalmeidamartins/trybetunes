@@ -28,13 +28,13 @@ class Header extends Component {
             <h1>{ user.name }</h1>
             <ul>
               <Link to="/search">
-                <li>Busca</li>
+                <li>Search</li>
               </Link>
               <Link to="/favorites">
-                <li>Biblioteca</li>
+                <li>Library</li>
               </Link>
               <Link to="/profile">
-                <li>Perfil</li>
+                <li>Profile</li>
               </Link>
             </ul>
           </>
