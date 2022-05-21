@@ -43,19 +43,17 @@ class Login extends Component {
     const { btnDisabled, loading, userCreated } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div>
         { userCreated && <Redirect to="/search" /> }
         { loading && <Loading /> }
         { !loading && (
           <form onSubmit={ this.handleCreateUser }>
             <input
-              data-testid="login-name-input"
               type="text"
               placeholder="Enter your name"
               onChange={ this.handleInputChange }
             />
             <button
-              data-testid="login-submit-button"
               type="submit"
               disabled={ btnDisabled }
               onSubmit={ this.handleCreateUser }

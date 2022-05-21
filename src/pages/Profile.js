@@ -26,13 +26,12 @@ class Profile extends Component {
     const { name, email, image, description, loading } = this.state;
 
     return (
-      <div data-testid="page-profile">
+      <div>
         <Header />
         { loading && <Loading /> }
         { !loading && (
           <>
             <img
-              data-testid="profile-image"
               src={ image }
               alt={ `Foto de ${name}` }
             />

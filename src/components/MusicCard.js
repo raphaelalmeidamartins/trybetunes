@@ -39,7 +39,7 @@ class MusicCard extends Component {
   }
 
   render() {
-    const { trackId, trackName, previewUrl } = this.props;
+    const { trackName, previewUrl } = this.props;
     const { loading, favorite } = this.state;
 
     return (
@@ -48,7 +48,7 @@ class MusicCard extends Component {
         { !loading && (
           <>
             <h3>{trackName}</h3>
-            <audio data-testid="audio-component" src={ previewUrl } controls>
+            <audio src={ previewUrl } controls>
               <track kind="captions" />
               O seu navegador não suporta o elemento
               {' '}
@@ -58,7 +58,6 @@ class MusicCard extends Component {
             <label htmlFor={ trackName }>
               <input
                 id={ trackName }
-                data-testid={ `checkbox-music-${trackId}` }
                 type="checkbox"
                 checked={ favorite }
                 onChange={ this.handleFavCheckbox }
@@ -77,7 +76,6 @@ MusicCard.defaultProps = {
 };
 
 MusicCard.propTypes = {
-  trackId: PropTypes.number.isRequired,
   trackName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
   isFavorite: PropTypes.bool.isRequired,

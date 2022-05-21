@@ -31,13 +31,13 @@ class Album extends Component {
     songsArray.shift();
 
     return (
-      <div data-testid="page-album">
+      <div>
         <Header />
         { loading && <Loading /> }
         { Boolean(songs.length) && (
           <>
-            <h1 data-testid="artist-name">{ songs[0].artistName }</h1>
-            <p data-testid="album-name">{ songs[0].collectionName }</p>
+            <h1>{ songs[0].artistName }</h1>
+            <p>{ songs[0].collectionName }</p>
           </>
         ) }
         { Boolean(songs.length)

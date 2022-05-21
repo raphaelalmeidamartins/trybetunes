@@ -51,20 +51,18 @@ class Search extends Component {
     } = this.state;
 
     return (
-      <div data-testid="page-search">
+      <div>
         <Header />
         <form>
           { searching && <Loading /> }
           { !searching && (
             <>
               <input
-                data-testid="search-artist-input"
                 type="text"
                 value={ searchValue }
                 onChange={ this.handleSearchInput }
               />
               <button
-                data-testid="search-artist-button"
                 type="button"
                 disabled={ btnDisabled }
                 onClick={ this.handleSearchClick }
@@ -81,7 +79,6 @@ class Search extends Component {
               ) }
               { Boolean(searchResults.length) && searchResults.map((album) => (
                 <AlbumCard
-                  data-testid={ `link-to-album-${album.collectionId}` }
                   key={ album.collectionId }
                   { ...album }
                 />

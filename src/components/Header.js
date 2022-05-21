@@ -25,15 +25,15 @@ class Header extends Component {
         { !user && <Loading /> }
         { user && (
           <>
-            <h1 data-testid="header-user-name">{ user.name }</h1>
+            <h1>{ user.name }</h1>
             <ul>
-              <Link to="/search" data-testid="link-to-search">
+              <Link to="/search">
                 <li>Busca</li>
               </Link>
-              <Link to="/favorites" data-testid="link-to-favorites">
+              <Link to="/favorites">
                 <li>Biblioteca</li>
               </Link>
-              <Link to="/profile" data-testid="link-to-profile">
+              <Link to="/profile">
                 <li>Perfil</li>
               </Link>
             </ul>

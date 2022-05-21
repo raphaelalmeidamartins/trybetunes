@@ -30,7 +30,7 @@ class Favorites extends Component {
     const { loading, favSongs } = this.state;
 
     return (
-      <div data-testid="page-favorites">
+      <div>
         <Header />
         { loading && <Loading /> }
         { !loading
