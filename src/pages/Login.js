@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 class Login extends Component {
   constructor() {
@@ -47,17 +47,18 @@ class Login extends Component {
         { userCreated && <Redirect to="/search" /> }
         { loading && <Loading /> }
         { !loading && (
-          <form>
+          <form onSubmit={ this.handleCreateUser }>
             <input
               data-testid="login-name-input"
               type="text"
+              placeholder="Enter your name"
               onChange={ this.handleInputChange }
             />
             <button
               data-testid="login-submit-button"
-              type="button"
+              type="submit"
               disabled={ btnDisabled }
-              onClick={ this.handleCreateUser }
+              onSubmit={ this.handleCreateUser }
             >
               Entrar
             </button>
