@@ -33,12 +33,12 @@ class Profile extends Component {
           <>
             <img
               src={ image }
-              alt={ `Foto de ${name}` }
+              alt="profile avatar"
             />
             <h3>{ name }</h3>
             <h4>{ email }</h4>
             <p>{ description }</p>
-            <Link to="/profile/edit">Editar perfil</Link>
+            <Link to="/profile/edit">Edit profile</Link>
           </>
         ) }
       </div>

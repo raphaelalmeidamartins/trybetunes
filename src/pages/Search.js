@@ -67,15 +67,15 @@ class Search extends Component {
                 disabled={ btnDisabled }
                 onClick={ this.handleSearchClick }
               >
-                Pesquisar
+                Search
               </button>
               { Boolean(prevSearchValue.length) && (
                 searchResults.length > 0
-                  ? <p>{ `Resultado de álbuns de: ${prevSearchValue}` }</p>
-                  : <p>Nenhum álbum foi encontrado</p>
+                  ? <p>{ `Albums of: ${prevSearchValue}` }</p>
+                  : <p>No album was found</p>
               ) }
               { Boolean(!prevSearchValue.length) && (
-                <p>Nenhum álbum foi encontrado</p>
+                <p>No album was found</p>
               ) }
               { Boolean(searchResults.length) && searchResults.map((album) => (
                 <AlbumCard

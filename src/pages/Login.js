@@ -58,7 +58,7 @@ class Login extends Component {
               disabled={ btnDisabled }
               onSubmit={ this.handleCreateUser }
             >
-              Entrar
+              Enter
             </button>
           </form>
         ) }

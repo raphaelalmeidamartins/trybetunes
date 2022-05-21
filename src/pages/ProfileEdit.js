@@ -82,7 +82,7 @@ class ProfileEdit extends Component {
               ) }
               onClick={ this.handleSaveButton }
             >
-              Salvar
+              Save changes
             </button>
           </form>
         ) }
