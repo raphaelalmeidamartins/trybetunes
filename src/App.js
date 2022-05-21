@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
 import Album from './pages/Album';
 import Favorites from './pages/Favorites';
 import Login from './pages/Login';
@@ -13,35 +12,12 @@ class App extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/">
-          <Login />
-        </Route>
-        <Route exact path="/search">
-          <Header />
-          <Search />
-        </Route>
-        <Route
-          exact
-          path="/album/:id"
-          render={ (props) => (
-            <>
-              <Header />
-              <Album { ...props } />
-            </>
-          ) }
-        />
-        <Route exact path="/favorites">
-          <Header />
-          <Favorites />
-        </Route>
-        <Route exact path="/profile">
-          <Header />
-          <Profile />
-        </Route>
-        <Route exact path="/profile/edit">
-          <Header />
-          <ProfileEdit />
-        </Route>
+        <Route exact path="/" component={ Login } />
+        <Route exact path="/search" component={ Search } />
+        <Route exact path="/album/:id" component={ Album } />
+        <Route exact path="/favorites" component={ Favorites } />
+        <Route exact path="/profile" component={ Profile } />
+        <Route exact path="/profile/edit" component={ ProfileEdit } />
         <Route path="/*" component={ NotFound } />
       </Switch>
     );

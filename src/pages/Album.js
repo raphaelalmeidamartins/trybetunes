@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Header from '../components/Header';
+import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
-import getMusics from '../services/musicsAPI';
-import Loading from './Loading';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import getMusics from '../services/musicsAPI';
 
 class Album extends Component {
   constructor() {
@@ -17,9 +18,8 @@ class Album extends Component {
   }
 
   async componentDidMount() {
-    const { location: { pathname } } = this.props;
-    const collectionId = pathname.split('/')[2];
-    const songs = await getMusics(collectionId);
+    const { match: { params: { id } } } = this.props;
+    const songs = await getMusics(id);
     const favSongs = await getFavoriteSongs();
 
     this.setState({ loading: false, songs, favSongs });
@@ -32,6 +32,7 @@ class Album extends Component {
 
     return (
       <div data-testid="page-album">
+        <Header />
         { loading && <Loading /> }
         { Boolean(songs.length) && (
           <>
@@ -54,8 +55,8 @@ class Album extends Component {
 }
 
 Album.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
 };
 

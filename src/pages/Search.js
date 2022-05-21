@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import searchAlbumsAPI from '../services/searchAlbumsAPI';
-import Loading from './Loading';
 import AlbumCard from '../components/AlbumCard';
+import Header from '../components/Header';
+import Loading from '../components/Loading';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
 class Search extends Component {
   constructor() {
@@ -51,6 +52,7 @@ class Search extends Component {
 
     return (
       <div data-testid="page-search">
+        <Header />
         <form>
           { searching && <Loading /> }
           { !searching && (

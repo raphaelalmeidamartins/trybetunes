@@ -1,4 +1,4 @@
-const USER_KEY = 'user';
+const USER_KEY = 'TrybeTunesUser';
 const TIMEOUT = 1500;
 const SUCCESS_STATUS = 'OK';
 
