@@ -60,6 +60,7 @@ class Search extends Component {
               <input
                 type="text"
                 value={ searchValue }
+                placeholder="Search for albums"
                 onChange={ this.handleSearchInput }
               />
               <button
