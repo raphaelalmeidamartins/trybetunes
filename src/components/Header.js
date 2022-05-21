@@ -26,17 +26,19 @@ class Header extends Component {
         { user && (
           <>
             <h1>{ user.name }</h1>
-            <ul>
-              <Link to="/search">
-                <li>Search</li>
-              </Link>
-              <Link to="/favorites">
-                <li>Library</li>
-              </Link>
-              <Link to="/profile">
-                <li>Profile</li>
-              </Link>
-            </ul>
+            <nav>
+              <ul>
+                <Link to="/search">
+                  <li>Search</li>
+                </Link>
+                <Link to="/favorites">
+                  <li>Library</li>
+                </Link>
+                <Link to="/profile">
+                  <li>Profile</li>
+                </Link>
+              </ul>
+            </nav>
           </>
         ) }
       </header>
