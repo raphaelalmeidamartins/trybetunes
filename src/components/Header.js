@@ -32,7 +32,7 @@ class Header extends Component {
                   <li>Search</li>
                 </Link>
                 <Link to="/favorites">
-                  <li>Library</li>
+                  <li>Your library</li>
                 </Link>
                 <Link to="/profile">
                   <li>Profile</li>
